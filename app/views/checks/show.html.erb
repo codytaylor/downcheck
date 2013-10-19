@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @check.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @check.url %>
+</p>
+
+<p>
+  <strong>Immediate:</strong>
+  <%= @check.immediate %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @check.start_date %>
+</p>
+
+<p>
+  <strong>Minute:</strong>
+  <%= @check.minute %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @check.hour %>
+</p>
+
+<p>
+  <strong>Day of month:</strong>
+  <%= @check.day_of_month %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @check.month %>
+</p>
+
+<p>
+  <strong>Day of week:</strong>
+  <%= @check.day_of_week %>
+</p>
+
+<%= link_to 'Edit', edit_check_path(@check) %> |
+<%= link_to 'Back', checks_path %>

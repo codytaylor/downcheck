@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131009004838) do
+ActiveRecord::Schema.define(version: 20131019154832) do
+
+  create_table "checks", force: true do |t|
+    t.integer  "site_id"
+    t.text     "name"
+    t.text     "url"
+    t.integer  "immediate"
+    t.date     "start_date"
+    t.integer  "minute"
+    t.integer  "hour"
+    t.integer  "day_of_month"
+    t.integer  "month"
+    t.integer  "day_of_week"
+    t.integer  "check_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "sites", force: true do |t|
+    t.integer  "user_id"
+    t.text     "name"
+    t.text     "url"
+    t.integer  "check_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

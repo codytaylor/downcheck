@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyText
+  url: MyText
+  immediate: 1
+  start_date: 2013-10-11
+  minute: 1
+  hour: 1
+  day_of_month: 1
+  month: 1
+  day_of_week: 1
+
+two:
+  name: MyText
+  url: MyText
+  immediate: 1
+  start_date: 2013-10-11
+  minute: 1
+  hour: 1
+  day_of_month: 1
+  month: 1
+  day_of_week: 1
