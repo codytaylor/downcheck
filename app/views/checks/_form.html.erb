@@ -1,8 +1,8 @@
 <%= form_for(@check) do |f| %>
   <% if @check.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@check.errors.count, "error") %> prohibited this check from being saved:</h2>
-
+      <h2><%= pluralize(@check.errors.count, "error") %> 
+        prohibited this check from being saved:</h2>
       <ul>
       <% @check.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -20,32 +20,14 @@
     <%= f.text_area :url %>
   </div>
   <div class="field">
-    <%= f.label :immediate %><br>
-    <%= f.number_field :immediate %>
+    <%= f.label "Interval" %><br>
+    <%= f.select :minute, 
+      [["1 Minutes","1"], ["5 Minutes","5"], 
+      ["15 Minutes","15"],["60 Minutes","60"]] %>
   </div>
   <div class="field">
-    <%= f.label :start_date %><br>
-    <%= f.date_select :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :minute %><br>
-    <%= f.number_field :minute %>
-  </div>
-  <div class="field">
-    <%= f.label :hour %><br>
-    <%= f.number_field :hour %>
-  </div>
-  <div class="field">
-    <%= f.label :day_of_month %><br>
-    <%= f.number_field :day_of_month %>
-  </div>
-  <div class="field">
-    <%= f.label :month %><br>
-    <%= f.number_field :month %>
-  </div>
-  <div class="field">
-    <%= f.label :day_of_week %><br>
-    <%= f.number_field :day_of_week %>
+    <%= f.label "Notify When Down?" %>
+    <%= f.check_box :notify %>
   </div>
   <div class="actions">
     <%= f.submit %>

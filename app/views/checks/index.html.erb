@@ -5,13 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Url</th>
-      <th>Immediate</th>
-      <th>Start date</th>
-      <th>Minute</th>
-      <th>Hour</th>
-      <th>Day of month</th>
-      <th>Month</th>
-      <th>Day of week</th>
+      <th>Interval</th>
       <th colspan=3>Actions</th>
     </tr>
   </thead>
@@ -21,13 +15,7 @@
       <tr>
         <td><%= check.name %></td>
         <td><%= check.url %></td>
-        <td><%= check.immediate %></td>
-        <td><%= check.start_date %></td>
         <td><%= check.minute %></td>
-        <td><%= check.hour %></td>
-        <td><%= check.day_of_month %></td>
-        <td><%= check.month %></td>
-        <td><%= check.day_of_week %></td>
         <td><%= link_to 'Show', check %></td>
         <td><%= link_to 'Edit', edit_check_path(check) %></td>
         <td><%= link_to 'Destroy', check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
