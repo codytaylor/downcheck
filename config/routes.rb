@@ -1,4 +1,6 @@
 Downcheck::Application.routes.draw do
+  get "contact_us/show_page"
+  get "about_us/show_page"
   get "landing/index"
   resources :checks
 
@@ -10,6 +12,8 @@ Downcheck::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'landing#index'
 
+  get 'contact' => 'contact_us#show_page'
+  get 'about' => 'about_us#show_page'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
