@@ -1,0 +1,25 @@
+
+<h1 class='page-title'>Check History for <%= @check_name %></h1>
+
+<table class='data-table'>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Status</th>
+      <th>Response time</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @check_data.each do |check_datum| %>
+      <tr>
+        <td><%= check_datum.date_checked.to_date %></td>
+        <td><%= check_datum.date_checked.to_time.strftime("%I:%M:%S") %></td>
+        <td><%= check_datum.status %></td>
+        <td><%= check_datum.response_time %> ms</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

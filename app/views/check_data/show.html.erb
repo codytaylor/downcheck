@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date checked:</strong>
+  <%= @check_datum.date_checked %>
+</p>
+
+<p>
+  <strong>Check:</strong>
+  <%= @check_datum.check_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @check_datum.status %>
+</p>
+
+<p>
+  <strong>Response time:</strong>
+  <%= @check_datum.response_time %>
+</p>
+
+<%= link_to 'Edit', edit_check_datum_path(@check_datum) %> |
+<%= link_to 'Back', check_data_path %>

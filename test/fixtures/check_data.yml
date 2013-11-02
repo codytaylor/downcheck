@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_checked: 2013-11-02 12:53:34
+  check_id: 1
+  status: 
+  response_time: 1
+
+two:
+  date_checked: 2013-11-02 12:53:34
+  check_id: 1
+  status: 
+  response_time: 1

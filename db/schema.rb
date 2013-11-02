@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026180507) do
+ActiveRecord::Schema.define(version: 20131102165334) do
+
+  create_table "check_data", force: true do |t|
+    t.datetime "date_checked"
+    t.integer  "check_id"
+    t.text     "status"
+    t.integer  "response_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "checks", force: true do |t|
     t.integer  "site_id"

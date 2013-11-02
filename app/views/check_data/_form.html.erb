@@ -1,0 +1,33 @@
+<%= form_for(@check_datum) do |f| %>
+  <% if @check_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@check_datum.errors.count, "error") %> prohibited this check_datum from being saved:</h2>
+
+      <ul>
+      <% @check_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_checked %><br>
+    <%= f.datetime_select :date_checked %>
+  </div>
+  <div class="field">
+    <%= f.label :check_id %><br>
+    <%= f.number_field :check_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :response_time %><br>
+    <%= f.number_field :response_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

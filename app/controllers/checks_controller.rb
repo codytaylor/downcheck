@@ -4,6 +4,7 @@ class ChecksController < ApplicationController
   # GET /checks
   # GET /checks.json
   def index
+    authorize_user!
     @checks = Check.all
   end
 
@@ -14,16 +15,19 @@ class ChecksController < ApplicationController
 
   # GET /checks/new
   def new
+    authorize_user!
     @check = Check.new
   end
 
   # GET /checks/1/edit
   def edit
+    authorize_user!
   end
 
   # POST /checks
   # POST /checks.json
   def create
+    authorize_user!
     @check = Check.new(check_params)
 
     respond_to do |format|
@@ -40,6 +44,7 @@ class ChecksController < ApplicationController
   # PATCH/PUT /checks/1
   # PATCH/PUT /checks/1.json
   def update
+    authorize_user!
     respond_to do |format|
       if @check.update(check_params)
         format.html { redirect_to @check, notice: 'Check was successfully updated.' }
@@ -54,6 +59,7 @@ class ChecksController < ApplicationController
   # DELETE /checks/1
   # DELETE /checks/1.json
   def destroy
+    authorize_user!
     @check.destroy
     respond_to do |format|
       format.html { redirect_to checks_url }

@@ -1,8 +1,11 @@
 Downcheck::Application.routes.draw do
+
   get "contact_us/show_page"
   get "about_us/show_page"
   get "landing/index"
+
   resources :checks
+  resources :check_data
 
   devise_for :users
 
@@ -14,6 +17,8 @@ Downcheck::Application.routes.draw do
 
   get 'contact' => 'contact_us#show_page'
   get 'about' => 'about_us#show_page'
+  get 'results' => 'check_data#index'
+  get 'results/:check_id' => 'check_data#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
