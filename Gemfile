@@ -46,3 +46,6 @@ end
 
 #For login system
 gem 'devise'
+
+#for periodic downchecks
+gem 'whenever', :require => false

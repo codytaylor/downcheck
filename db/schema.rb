@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131102165334) do
+ActiveRecord::Schema.define(version: 20131110155107) do
 
   create_table "check_data", force: true do |t|
     t.datetime "date_checked"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20131102165334) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "notify"
+    t.integer  "active"
   end
 
   create_table "sites", force: true do |t|
