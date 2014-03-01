@@ -16,7 +16,8 @@
         <td><%= check.name %></td>
         <td><%= check.url %></td>
         <td><%= check.minute %></td>
-        <td><%= link_to 'Show', check %></td>
+        <td><%= link_to 'Results', 'results/'+check.id.to_s %><br>
+         </td>
         <td><%= link_to 'Edit', edit_check_path(check) %></td>
         <td><%= link_to 'Destroy', check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

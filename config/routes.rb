@@ -5,7 +5,7 @@ Downcheck::Application.routes.draw do
   get "landing/index"
 
   resources :checks
-  resources :check_data
+  resources :check_datum
 
   devise_for :users
 
@@ -13,12 +13,15 @@ Downcheck::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'landing#index'
+  root to: 'landing#index'
 
   get 'contact' => 'contact_us#show_page'
   get 'about' => 'about_us#show_page'
-  get 'results' => 'check_data#index'
+
   get 'results/:check_id' => 'check_data#index'
+  get 'results' => 'check_data#index'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
