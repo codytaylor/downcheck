@@ -1,35 +1,36 @@
 <%= form_for(@check) do |f| %>
-  <% if @check.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@check.errors.count, "error") %> 
-        prohibited this check from being saved:</h2>
-      <ul>
-      <% @check.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if @check.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@check.errors.count, "error") %> prohibited this check from being saved:</h2>
+            <ul>
+                <% @check.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_area :url %>
-  </div>
-  <div class="field">
-    <%= f.label "Interval" %><br>
-    <%= f.select :minute, 
-      [["1 Minutes","1"], ["5 Minutes","5"], 
-      ["15 Minutes","15"],["60 Minutes","60"]] %>
-  </div>
-  <div class="field">
-    <%= f.label "Notify When Down?" %>
-    <%= f.check_box :notify %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_area :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :url %>
+        <%= f.text_area :url, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label "Interval" %>
+        <%= f.select :minute, 
+                    [["1 Minutes","1"], ["5 Minutes","5"], 
+                    ["15 Minutes","15"],["60 Minutes","60"]], {}, {class: "form-control"} %>
+    </div>
+    <div class="checkbox">      
+        <label>
+            <%= f.check_box :notify %> Notify When Down
+        </label>
+    </div>
+
+    <div class="actions">
+        <%= f.submit class: "btn btn-lg btn-primary btn-block" %>
+    </div>
 <% end %>
