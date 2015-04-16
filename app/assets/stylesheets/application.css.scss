@@ -20,58 +20,38 @@
  from http://www.colorcombos.com/color-schemes/426/ColorCombo426.html
  */
 
-#header {
-	width:100%;
-	height:38px;
-	background-color:#90CA77;
-	color:#9E3B33;
-	padding:0;
-	margin:0;
-}
-ul#navbar {
-	font-family:Arial, sans-serif;
-	font-size:20px;
-	list-style-type: none;
-	margin:0px;
-	padding-top:10px;
-	padding-left:10px;
-}
-ul#navbar li{
-	display:inline;
-	padding:10px;
-}
+/* bootstrap imports */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
 body {
-  display: block;
-  margin: 0;
+    display: block;
+    margin: 0;
+    padding-top: 60px;  
 }
-#logout_div {
-	float:right;
-	padding:9px;
+
+.notice {
+    padding-top: 1em;
 }
-#menu_div {
-	float:left;
+
+/* header */
+
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    line-height: 1.7em;
 }
-#content {
-	margin-left:17px;
-	padding-top:10px;
-}
-.page-title {
-	color:#E48743;	
-}
-.data-table {
-	border:1px solid #E48743;
-	border-spacing:0;
-}
-.data-table tr th{
-	padding-left:10px;
-	padding-right:10px;
-	padding-top:6px;
-	padding-bottom:6px;
-	background-color:#81C6DD;
-	color:#9E3B33;
-	border-right:1px solid #E48743;
-}
-.data-table td {
-	padding:3px 10px 3px 10px;
-	border-right:1px solid #E48743;
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
 }

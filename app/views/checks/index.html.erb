@@ -1,30 +1,30 @@
 <h1 class='page-title'>Checks</h1>
 
-<table class='data-table'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Interval</th>
-      <th colspan=3>Actions</th>
-    </tr>
-  </thead>
+<div class='table-responsive'>
+    <table class='data-table table table-hover'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Url</th>
+          <th>Interval</th>
+          <th colspan=3>Actions</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @checks.each do |check| %>
-      <tr>
-        <td><%= check.name %></td>
-        <td><%= check.url %></td>
-        <td><%= check.minute %></td>
-        <td><%= link_to 'Results', 'results/'+check.id.to_s %><br>
-         </td>
-        <td><%= link_to 'Edit', edit_check_path(check) %></td>
-        <td><%= link_to 'Destroy', check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+      <tbody>
+        <% @checks.each do |check| %>
+          <tr>
+            <td><%= check.name %></td>
+            <td><%= check.url %></td>
+            <td><%= check.minute %></td>
+            <td><%= link_to 'Results', 'results/'+check.id.to_s %><br>
+             </td>
+            <td><%= link_to 'Edit', edit_check_path(check) %></td>
+            <td><%= link_to 'Destroy', check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
 
 <%= link_to 'New Check', new_check_path %>
