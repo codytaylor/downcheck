@@ -29,6 +29,7 @@ class ChecksController < ApplicationController
   def create
     authorize_user!
     @check = Check.new(check_params)
+    @check.user_id = current_user.id
 
     respond_to do |format|
       if @check.save

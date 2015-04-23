@@ -20,9 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 #
 
-RAILS_ROOT = File.dirname(__FILE__) + '/..'
-
-set :output, "/var/log/whenever_log.log"
-every 1.minute do
-  runner "CheckSchedulerController.run_tasks"
+# Run all tasks every minute
+every 1.minutes do
+    runner "CheckSchedulerController.run_tasks"
 end
