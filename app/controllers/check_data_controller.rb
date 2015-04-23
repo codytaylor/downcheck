@@ -6,12 +6,12 @@ class CheckDataController < ApplicationController
   def index
     authorize_user!
     if(params[:check_id])
-      @check_data = CheckDatum.where("check_id="+params[:check_id])
-      check = Check.find(params[:check_id])
+        @check_data = CheckDatum.where(check_id: params[:check_id]).order(date_checked: :desc)
+        check = Check.find(params[:check_id])
       @check_name = check.name
     else
       @check_name = "All Recent Checks"
-      @check_data = CheckDatum.all
+      @check_data = CheckDatum.all.order(date_checked: :desc)
     end
   end
 

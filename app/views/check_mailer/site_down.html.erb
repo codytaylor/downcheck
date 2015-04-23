@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    </head>
+    <body>
+        <h1>Your site, <%= link_to "#{@check.name}", "#{@check.url}" %> seems to be down</h1>
+        <p>Login to <%= link_to "DownCheck", root_path %> to get more details.</p>
+        <p>We hope it's nothing major!</p>
+        <p>Thanks for using DownCheck.net</p>
+    </body>
+</html>
